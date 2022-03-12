@@ -1,0 +1,22 @@
+.main-btn {
+    -fx-border-width: 2px;
+    -fx-border-radius: 20px;
+    -fx-border-color: #344055;
+    -fx-background-radius: 20px;
+    -fx-background-color: #e3e3e3;
+}
+
+.main-btn:hover {
+    -fx-border-color: #266DD3;
+}
+
+.main-btn:pressed {
+    -fx-translate-y: 1px;
+    -fx-translate-x: 1px;
+    -fx-background-color: #d3d3d3;
+    -fx-border-color: #2694ff;
+}
+
+#listViewPlayersInTeam .list-cell {
+    -fx-alignment: center;
+}

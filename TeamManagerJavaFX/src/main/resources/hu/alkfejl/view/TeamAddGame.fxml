@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorRoot" prefHeight="600.0" prefWidth="800.0" stylesheets="@../static/css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.alkfejl.view.controller.TeamAddGameViewController">
+   <children>
+      <GridPane prefHeight="600.0" prefWidth="800.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="60.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="45.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="45.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="45.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="45.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="40.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="10.0" prefHeight="50.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Hazai" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="Idegen" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="comboBoxTeamHome" prefWidth="250.0" GridPane.rowIndex="2" />
+            <ComboBox fx:id="comboBoxTeamAway" prefWidth="250.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="Helyszín" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFieldLocation" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="textFieldReferee" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Bíró" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="Időpont" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="datePickerGameDate" editable="false" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Spinner fx:id="spinnerTeamHomeScore" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="70.0">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Spinner>
+                  <Button fx:id="buttonChangeTeam" mnemonicParsing="false" onAction="#changeTeam" prefHeight="30.0" prefWidth="88.0" styleClass="main-btn">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../static/img/change.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Spinner fx:id="spinnerTeamAwayScore" prefHeight="25.0" prefWidth="70.0">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Spinner>
+               </children>
+            </HBox>
+            <Label text="Játékosok" GridPane.rowIndex="3">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="Játékosok" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableViewTeamHomeActivePlayers" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4" GridPane.rowSpan="4">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <placeholder>
+                  <Label text="Nincs adat." />
+               </placeholder>
+            </TableView>
+            <TableView fx:id="tableViewTeamAwayActivePlayers" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" GridPane.rowSpan="4">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <placeholder>
+                  <Label text="Nincs adat." />
+               </placeholder>
+            </TableView>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="10">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0">
+                     <children>
+                        <Button fx:id="buttonSaveGame" mnemonicParsing="false" onAction="#saveGame" prefHeight="40.0" prefWidth="100.0" styleClass="main-btn" text="Mentés">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox maxWidth="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="260.0" />
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="400.0">
+                     <children>
+                        <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#closeTeamAddGame" prefHeight="40.0" prefWidth="100.0" styleClass="main-btn" text="Mégse">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <Label text="Gólszerzők" GridPane.rowIndex="8">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label text="Gólszerzők" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableViewTeamHomeScorerPlayers" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <placeholder>
+                  <Label text="Nincs adat." />
+               </placeholder>
+            </TableView>
+            <TableView fx:id="tableViewTeamAwayScorerPlayers" editable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </GridPane.margin>
+               <placeholder>
+                  <Label text="Nincs adat." />
+               </placeholder>
+            </TableView>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="9">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="90.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Utazás" GridPane.columnSpan="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="Indulás" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Érkezés" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Típus" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBoxAwayTeamTravelType" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <DatePicker fx:id="datePickerAwayTeamTravelStartDate" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </DatePicker>
+                  <DatePicker fx:id="datePickerAwayTeamTravelArriveDate" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </DatePicker>
+               </children>
+            </GridPane>
+            <Label text="Mérkőzés hozzáadása" GridPane.columnSpan="3">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
