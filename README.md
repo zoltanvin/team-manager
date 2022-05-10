@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/zolvin/team-manager"><img src="https://github.com/zolvin/team-manager/blob/main/Misc/logo.png" alt="Image rotator" width="200"></a>
+  <a href="https://github.com/zoltanvin/team-manager"><img src="https://github.com/zoltanvin/team-manager/blob/main/Misc/logo.png" alt="Team Manager" width="200"></a>
   <br>
   Team Manager
   <br>
@@ -75,7 +75,7 @@
 
 # C# Program ⚽
 
-![screenshot](https://github.com/zolvin/team-manager/blob/main/Misc/demo1.gif)
+![screenshot](https://github.com/zoltanvin/team-manager/blob/main/Misc/demo1.gif)
 
 - I created the application using `WinForms` in Visual Studio. Within the application you can add, modify and list players and teams.
 - Listing: List Player/Team within the Player/Team menu
@@ -85,7 +85,7 @@
 
 # JavaFX Program 🥅
 
-![screenshot](https://github.com/zolvin/team-manager/blob/main/Misc/demo2.gif)
+![screenshot](https://github.com/zoltanvin/team-manager/blob/main/Misc/demo2.gif)
 
 - I created the application according to the principles of MVC
 - I used version 11 Java during the development
